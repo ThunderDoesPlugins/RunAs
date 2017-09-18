@@ -1,0 +1,27 @@
+name: RunAs
+version: 1.0.0
+api: [3.0.0-ALPHA7]
+author: Thunder33345
+description: "Run Commands As Others!"
+website: ""
+main: Thunder33345\RunAs\RunAs
+
+commands:
+  runas:
+    usage: "/runas <player> <command> [args]"
+    permission: "runas.use"
+    description: "Run command as the player"
+    aliases: ['ra']
+  runasexact:
+    usage: "/runase <exact player> <command> [args]"
+    permission: "runas.use"
+    description: "Run command as the exact player"
+    aliases: ['runase','rae']
+
+permissions:
+  runas:
+    default: false
+    children:
+      runas.use:
+        description: "Grant others to run commands as others!"
+        default: op
